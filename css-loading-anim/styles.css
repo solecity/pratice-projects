@@ -1,0 +1,57 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}
+
+.loading {
+  height: 100%;
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.loading > img {
+  height: 64px;
+}
+
+.loading > .cross {
+  animation: rotate 2s 0s infinite;
+  -webkit-animation: rotate 2s 0s infinite;
+}
+
+.loading > .circle {
+  animation: rotate 2s 0.15s infinite;
+  -webkit-animation: rotate 2s 0.15s infinite;
+}
+
+.loading > .triangle {
+  animation: rotate 2s 0.3s infinite;
+  -webkit-animation: rotate 2s 0.3s infinite;
+}
+
+.loading > .square {
+  animation: rotate 2s 0.45s infinite;
+  -webkit-animation: rotate 2s 0.45s infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg) scale(1);
+    -webkit-transform: rotateZ(0deg) scale(1);
+  }
+  30% {
+    transform: rotateZ(90deg) scale(0);
+    -webkit-transform: rotateZ(90deg) scale(0);
+  }
+  40% {
+    transform: rotateZ(-90deg) scale(0);
+    -webkit-transform: rotateZ(-90deg) scale(0);
+  }
+  70% {
+    transform: rotateZ(0deg) scale(1);
+    -webkit-transform: rotateZ(0deg) scale(1);
+  }
+}
