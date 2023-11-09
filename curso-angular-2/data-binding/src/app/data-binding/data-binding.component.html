@@ -1,0 +1,139 @@
+<!-- <section class="event-binding">
+  <article>
+    <h3>Event Binding</h3>
+
+    <div>
+      <button class="btn btn-primary" (click)="botaoClicado()">
+        Me clique!
+      </button>
+
+      <br />
+
+      <input
+        type="text"
+        (keyup)="onKeyUp($event)"
+        (keyup.enter)="salvarValor(campoInput.value)"
+        (blur)="salvarValor(campoInput.value)"
+        #campoInput
+      />
+
+      <p>Valor atual: {{ valorAtual }}</p>
+      <p>Valor salvo: {{ valorSalvo }}</p>
+
+      <br />
+
+      <span
+        (mouseover)="onMouseOverOut()"
+        (mouseout)="onMouseOverOut()"
+        [class.highlight]="isMouseOver"
+      >
+        Passe o mouse sobre mim
+      </span>
+    </div>
+  </article>
+</section>
+
+<section class="property-binding">
+  <article>
+    <h3>Class e Style Binding</h3>
+
+    <div>
+      Selecione uma classe:
+
+      <select #classe (change)="(0)">
+        <option value="alert-success">Sucesso</option>
+        <option value="alert-info">Info</option>
+        <option value="alert-warning">Alerta</option>
+        <option value="alert-danger">Erro</option>
+      </select>
+
+      <br />
+
+      <div class="alert {{ classe.value }}" role="alert">
+        Texto colorido conforme valor do select
+      </div>
+
+      <div
+        class="alert"
+        role="alert"
+        [class.alert-success]="classe.value == 'alert-success'"
+      >
+        success
+      </div>
+
+      <div
+        class="alert"
+        role="alert"
+        [class.alert-info]="classe.value == 'alert-info'"
+      >
+        info
+      </div>
+
+      <div
+        class="alert"
+        role="alert"
+        [class.alert-warning]="classe.value == 'alert-warning'"
+      >
+        warning
+      </div>
+
+      <div
+        class="alert"
+        role="alert"
+        [class.alert-danger]="classe.value == 'alert-danger'"
+      >
+        danger
+      </div>
+
+      <div
+        class="alert"
+        role="alert"
+        [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'"
+      >
+        Esse texto aparece somente em caso de erro
+      </div>
+    </div>
+  </article>
+
+  <br />
+
+  <article>
+    <h3>Property Binding</h3>
+
+    <img src="{{ urlImagem }}" />
+    <img [src]="urlImagem" />
+    <img bind-src="urlImagem" />
+  </article>
+
+  <br />
+
+  <article>
+    <h3>Interpolation</h3>
+
+    <p>String renderizada com interpolação: {{ url }}</p>
+    <p>Resultado de 1 + 1 é: {{ 1 + 1 }}</p>
+    <p>Resultado de 1 + 1 não é: {{ 1 + 1 + getValor() }}</p>
+    <p>
+      Curso de Angular e gosto do curso: {{ cursoAngular && getCurtirCurso() }}
+    </p>
+  </article>
+</section> -->
+
+<!-- <app-meu-form /> -->
+
+<section class="input-output-properties">
+  <article>
+    <h3>Input / Output Properties</h3>
+
+    <app-input-property [nome]="nomeDoCurso" />
+
+    <!-- <contador valor="10"></contador> -->
+
+    <br />
+
+    <contador
+      [valor]="valorInicial"
+      (mudouValor)="onMudouValor($event)"
+    ></contador>
+  </article>
+</section>
